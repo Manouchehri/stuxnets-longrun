@@ -1,0 +1,11 @@
+import logging
+
+DEBUG = False
+SQLALCHEMY_ECHO = False
+SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+
+SECRET = '\x00'*128
+
+LOGGING_ENABLED = True
+LOGGING_LEVEL = logging.INFO
+
