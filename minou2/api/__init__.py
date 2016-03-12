@@ -1,4 +1,5 @@
+from .auth import auth
+
 def Api(app):
-    @app.route('/ping')
-    def ping():
-        return 'echo'
+    app.add_url_rule('/auth', 'auth', auth, methods=['POST'])
+

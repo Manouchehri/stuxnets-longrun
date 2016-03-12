@@ -15,9 +15,7 @@ def create_app(config=None):
 
     from .api import Api
     Api(app)
-
-    app.logger.info('[minou] App created')
-
     CORS(app)
 
+    app.logger.info('App created')
     return app
