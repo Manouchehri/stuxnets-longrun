@@ -1,6 +1,8 @@
+from celery import Celery
 from flask import Flask, request, abort
 from flask.ext.cors import CORS
 from .plugins import logging
+import config
 import os
 
 def create_app(config=None):
@@ -19,3 +21,6 @@ def create_app(config=None):
 
     app.logger.info('App created')
     return app
+
+celery_app = Celery('Minou2')
+celery_app.config_from_object(config.celery)

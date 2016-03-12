@@ -2,9 +2,7 @@ import itsdangerous
 from flask import current_app, request, abort, jsonify
 from ..models import user
 
-# Authenticate a user, given a username and password. The response contains
-# the "token" field to be used in following authenticated requests set in
-# the "X-Auth-Token" header.
+# Authenticate a user, given a username and password.
 def auth():
     username = request.form.get('username')
     password = request.form.get('password')
