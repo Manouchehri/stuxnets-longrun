@@ -17,6 +17,12 @@ def Api(app):
     #
     # The request should contains the |data| field containing the text to be
     # analyzed. The response should contains the |job| field that can later be
-    # reused to poll the task status and get the task result.
-    app.add_url_rule('/anal', 'anal', anal.create, methods=['POST'])
+    # reused to poll the task status and get the task result from
+    # `GET /anal/<task_id>`.
+    app.add_url_rule('/anal', 'create_anal', anal.create, methods=['POST'])
+
+    # GET /anal/<task_it>
+    # Get a job status in the |status| field. If the job has successfully
+    # completed, the result is available in the |result|.
+    app.add_url_rule('/anal/<task_id>', 'create_poll', anal.poll, methods=['GET'])
 
