@@ -1,3 +1,4 @@
+import os
 import logging
 
 DEBUG = True
@@ -15,3 +16,7 @@ celery = {
     'CELERY_IMPORTS': ['minou2.analysis'],
     'CELERY_RESULT_BACKEND': 'redis://localhost:6379/1'
 }
+
+ALCHEMYAPI_TOKEN = '<Must be defined in env>'
+if 'ALCHEMYAPI_TOKEN' in os.environ:
+    ALCHEMYAPI_TOKEN = os.environ['ALCHEMYAPI_TOKEN']
