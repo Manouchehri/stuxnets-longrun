@@ -2,15 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Minou2</title>
+    <title>StuxnETS.AI</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="minou2.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
   </head>
   <body>
-    <textarea id="editor">
-      Bouldering is a form of rock climbing that is performed without the use of ropes or harnesses. While it can be done without any equipment whatsoever, most climbers use climbing shoes to help secure footholds, chalk to keep their hands dry, and bouldering mats to prevent injuries from falls. Unlike free solo climbing, which is also performed without ropes, bouldering problems (the path that a climber takes in order to complete the climb) are usually less than 6 meters (20 ft.) tall. Artificial climbing walls allow boulderers to train indoors in areas without natural boulders. Bouldering competitions, which employ a variety of formats, take place in both indoor and outdoor settings.
-    </textarea>
-    <button id="magic">Do the magic</button>
-    <div id="image"></div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">StuxnETS.AI</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>StuxnETS.AI Competition</h1>
+        <textarea id="editor" class="form-control" style="min-height:300px">Bouldering is a form of rock climbing that is performed without the use of ropes or harnesses. While it can be done without any equipment whatsoever, most climbers use climbing shoes to help secure footholds, chalk to keep their hands dry, and bouldering mats to prevent injuries from falls. Unlike free solo climbing, which is also performed without ropes, bouldering problems (the path that a climber takes in order to complete the climb) are usually less than 6 meters (20 ft.) tall. Artificial climbing walls allow boulderers to train indoors in areas without natural boulders. Bouldering competitions, which employ a variety of formats, take place in both indoor and outdoor settings.</textarea>
+          <br/>
+          <button id="magic" class="btn btn-default">Do the magic</button>
+          <br/>
+          <div id="image">
+          </div>
+      </div>
+    </div>
   </body>
 </html>
