@@ -1,8 +1,6 @@
 import config
-
-from celery import Celery
 from . import celery_app
-from .alchemyapi import AlchemyAPI
+from .providers.alchemyapi import AlchemyAPI
 
 alchemyapi = AlchemyAPI(config.ALCHEMYAPI_TOKEN)
 
@@ -10,3 +8,4 @@ alchemyapi = AlchemyAPI(config.ALCHEMYAPI_TOKEN)
 def analyze(text):
     keywords = alchemyapi.keywords('text', text)
     return keywords
+
