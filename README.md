@@ -24,8 +24,9 @@ Long running competition for team STUXNETS from ÉTS.
  * Search images related to analysis (`minou2/models/images.py`, `minou2/providers/*.py`):
    - `POST /search`
    - `GET /search/<id>`
-* Frontend with TinyMCE
-*Drag and drop images in the post to add them
+ * Frontend:
+   - TinyMCE editor
+   - Drag and drop images in post
  * Authenticate [Partial] (`minou2/api/auth.py`)
    - `POST /auth`
 
