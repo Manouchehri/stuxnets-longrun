@@ -24,14 +24,13 @@ Long running competition for team STUXNETS from ÉTS.
  * Search images related to analysis (`minou2/models/images.py`, `minou2/providers/*.py`):
    - `POST /search`
    - `GET /search/<id>`
+* Frontend with TinyMCE
+*Drag and drop images in the post to add them
  * Authenticate [Partial] (`minou2/api/auth.py`)
    - `POST /auth`
 
 # TODO
  * Local images provider
- * Frontend
- * Settings to manager API keys
- * Set up AWS server
  * Cache analsysis/search results
  * Display images prices
  * Save/load posts
