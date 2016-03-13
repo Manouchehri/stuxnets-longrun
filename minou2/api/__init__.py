@@ -1,5 +1,6 @@
 from . import auth
 from . import anal
+from . import search
 
 def Api(app):
     # # POST /auth
@@ -21,8 +22,19 @@ def Api(app):
     # `GET /anal/<task_id>`.
     app.add_url_rule('/anal', 'create_anal', anal.create, methods=['POST'])
 
-    # GET /anal/<task_it>
+    # GET /anal/<task_id>
     # Get a job status in the |status| field. If the job has successfully
     # completed, the result is available in the |result|.
-    app.add_url_rule('/anal/<task_id>', 'create_poll', anal.poll, methods=['GET'])
+    app.add_url_rule('/anal/<task_id>', 'poll_anal', anal.poll, methods=['GET'])
+
+    # POST /search
+    # Create a new job search for images related to concepts extracted from an
+    # analysis job. The response should contains the |job| field that can later be
+    # reused to poll the task status and get the task result from
+    app.add_url_rule('/search', 'create_search', search.create, methods=['POST'])
+
+    # GET /search/<task_id>
+    # Get a job status in the |status| field. If the job has successfully
+    # completed, the result is available in the |result|.
+    app.add_url_rule('/search/<task_id>', 'poll_search', search.poll, methods=['GET'])
 
