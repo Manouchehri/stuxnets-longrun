@@ -1,7 +1,6 @@
 $(function(){
   'use strict';
   var on_complete_analysis = function(images) {
-    console.log(images);
     images.forEach(function(image) {
       $('#image').append('<img src="'+image.preview+'" width="100px"/>');
     });
